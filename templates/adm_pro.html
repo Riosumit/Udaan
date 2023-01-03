@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body style="background-color: rgb(225, 225, 225)">
+    <nav class="navlinks">
+      <div class="logo">
+        <img src="{% static 'img/logo.png'%}" alt="sih logo" />
+        <h2>UDAAN</h2>
+      </div>
+      <div class="btns">
+        <a href="a_logout" style="text-decoration:none; padding-right: 40px;"><button type="button" class="btn btn-primary">Logout</button></a>
+      </div>
+    </nav>
+    <div class="adm">
+      <a class="admcard" href="a_student">
+        <img src="{% static 'img/student.png'%}" alt="" />
+        <div class="stud">
+          <h3>Student</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+            ratione praesentium fugiat beatae saepe aut deleniti ipsam, totam
+            repellendus quos necessitatibus!
+          </p>
+        <button type="button" class="btn btn-primary">Primary</button>
+
+        </div>
+      </a>
+      <a class="admcard" href="institute">
+        <img src="{% static 'img/Coaching.png'%}" alt="" />
+        <div class="stud">
+          <h3>Institute</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+            ratione praesentium fugiat beatae saepe aut deleniti ipsam, totam
+            repellendus quos necessitatibus!
+          </p>
+        <button type="button" class="btn btn-primary">Primary</button>
+
+        </div>
+      </a>
+    {% comment %} </div>
+    <div class="adm"> {% endcomment %}
+      <a class="admcard" href="notice">
+        <img src="{% static 'img/Notice.png'%}" alt="" />
+        <div class="stud">
+          <h3>Notice</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+            ratione praesentium fugiat beatae saepe aut deleniti ipsam, totam
+            repellendus quos necessitatibus!
+          </p>
+        <button type="button" class="btn btn-primary">Primary</button>
+
+        </div>
+      </a>
+      {% comment %} <a class="admcard" href="marks">
+        <img src="{% static 'img/Marks.png'%}" alt="" />
+        <div class="stud">
+          <h3>Marks</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+            ratione praesentium fugiat beatae saepe aut deleniti ipsam, totam
+            repellendus quos necessitatibus!
+          </p>
+            <button type="button" class="btn btn-primary" style="margin:auto">Primary</button>
+        </div>
+      </a> {% endcomment %}
+    </div>
+    </div>
+  </body>
+</html>

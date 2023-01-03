@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ins_pg</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/notice.css' %}" />
+
+    <!-- <link rel="stylesheet" href="adm.css" /> -->
+
+    <!-- <link rel="stylesheet" href="../static/css/new.css"> -->
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../static/img/logo.png" alt="logo" />
+      </div>
+
+      {% comment %} <ul class="navlinks">
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">About Us</a></li>
+      </ul> {% endcomment %}
+    </nav>
+    
+    <form method="post" action="notice" enctype="multipart/form-data" >
+      {% csrf_token %}
+        <label for="title">
+          Title
+          <input type="text" name="title" placeholder="Notice" required>
+        </label>
+        <label for="file">
+          File
+          <input type="file" name="notice_file"  required>
+        </label>
+        <button type="submit">Post</button>
+    </form>
+    
+  </body>
+</html>
